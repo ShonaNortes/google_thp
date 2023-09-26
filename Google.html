@@ -3,9 +3,7 @@
         <title> Google </title>
         <meta charset="utf-8"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
 
     <style>
         .menu {
@@ -23,9 +21,17 @@
             align-items: flex-end;
             margin-left: 20px;
         }
+
         a {
+            color: black;
             margin-left: 10px;
+            text-decoration: none;
         }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         .barre {
             display: flex;
             justify-content: center;
@@ -34,17 +40,31 @@
             margin-left: 20px;
         
         }
+
+        .connexion {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-family: arial,sans-serif;
+            font-size: 14px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
         .button1 {
             display: flex;
             justify-content: center;
             height: 40%;
             background-color: white;
             font-family: Arial, Helvetica, sans-serif;
-            color: ;
             margin-left: 15px;
             margin-top: 20px;
-            
-            
         }
         .France {
             background-color: whitesmoke;
@@ -67,8 +87,9 @@
             background-color: whitesmoke;
             color: slategray;
             font-size: small;
-            ;
+            margin: 20px;
         }
+
         .bas {
             background-color: whitesmoke;
             display: flex;
@@ -78,21 +99,48 @@
             color: slategray;
             font-size: small;
         }
+
         .trait {
             color: slategray;
         }
-  
-        
+
+        .google_search, .lucky {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-family: arial,sans-serif;
+            font-size: 14px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            line-height: 27px;
+            height: 36px;
+            min-width: 54px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .barre {
+            height: 40px;
+        }
+
+        #input {
+            border-radius: 30px;
+            border-style: solid;
+            border-width: 1px;
+        }
+
     </style>
     </head>
     
     <body>
         <!-- Creer une boite qui contient le menu (liens etc.) -->
         <div class="menu">
-            <a href="#"style="text-decoration:none">Gmail</a>
-            <a href="#"style="text-decoration:none">Images</a>
-            <a href="#"style="text-decoration:none"><img src="app.svg"></a>
-            <a href="#"style="text-decoration:none"><button class="google_search" style="background-color:royalblue;color:white;">Connexion</button> </a>
+            <a href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&ifkv=AYZoVhfFtGP7TTx0O0xV2U7c7L-du4DwZimLfErReqE1auhqt0FdSXBncAl_VdPIM77An9kpeN1Yow&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Gmail<style></style></a>
+            <a href="https://www.google.com/imghp?hl=fr&ogbl">Images</a>
+            <a href="#"><img src="app.svg"></a>
+            <a href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fwww.google.com%2F&ec=GAZAmgQ&hl=fr&passive=true&ifkv=AYZoVhd6k13A59NVzFsXi2u778_62LXf8bI-A_JqQPz_Ag-j7lOsre9W1RFqHUMdAblHVdPGDl6Y&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><button class="connexion" style="background-color:royalblue;color:white;">Connexion</button> </a>
         </div> 
 
         <!-- Creer une boite qui contient le logo Google -->
@@ -103,9 +151,10 @@
         </div>
 
         <div class="barre">
-            <img src="loupe.png"alt="Image" style="width:20px;height:20px;margin-right:5px;">
-            <INPUT TYPE=text name=q size=31 maxlength=255 value="">
-               <div> <img src="google2.png"alt="Image" style="width:20px;height:20px;margin-left:5px;">
+            <img src="loupe.png" alt="Image" style="width:30px;height:30px;margin-right:5px;">
+            <INPUT id="input" name="search_input" TYPE=text name=q size=80 maxlength=255 value="">
+                <div>
+                    <img src="google2.png" style="width:30px;height:30px;margin-left:5px;"></button> 
                 </div>
               </div>   
         </div>
@@ -123,39 +172,19 @@
         
       <div class="pub">
        <img src="feuille.png"alt="Image" style="width:15px;height:15px;margin-left:20px;justify-content: end;">
-           <p>Notre troisième décennie d'action pour le climat</p>
+           <a href="https://sustainability.google/intl/fr/commitments/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">Notre troisième décennie d'action pour le climat</a>
       </div>
 
       <div class="bas">
-        <p> <a href="#"text-decoration:none"; À propos</p>
-        <p>Publicité</p>
-        <p>Entreprise</p>
-        <p>Comment fonctionne la recherche Google?</p>
-        <p>Signaler un contenu inapproprié</p>
-        <p>Info consommateurs</p>
-        <p>Confidentialité</p>
-        <p>Conditions</p>
-        <p>Paramètres</p>
+        <a href="https://about.google/?utm_source=google-FR&utm_medium=referral&utm_campaign=hp-footer&fg=1">À propos</a>
+        <a href="https://ads.google.com/intl/fr_fr/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Publicité</a>
+        <a href="https://smallbusiness.withgoogle.com/intl/fr_fr/?subid=fr-fr-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=fr-fr-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/">Entreprise</a>
+        <a href="https://www.google.com/search/howsearchworks/?fg=1">Comment fonctionne la recherche Google?</a>
+        <a href="https://support.google.com/legal/answer/3110420?hl=fr&fg=1">Signaler un contenu inapproprié</a>
+        <a href="https://support.google.com/websearch/answer/7585859?hl=fr&fg=1&visit_id=638313427393100296-43411853&p=fr_consumer_info&rd=1">Info consommateurs</a>
+        <a href="https://policies.google.com/privacy?hl=fr&fg=1">Confidentialité</a>
+        <a href="https://policies.google.com/terms?hl=fr&fg=1">Conditions</a>
+        <a href="#">Paramètres</a>
       </div>
-   
-    
-
-        <!--<div style="text-align: center;">
-        <img src="logo.png">
-        </div>
-        </div style="text-align: right;">
-        <a href="https://gmail.com">Gmail</a>  <a href="https://www.google.com/imghp?hl=en">Images</a>
-        </div>
-            <FORM method=GET action="http://www.google.be/search">
-            <TABLE bgcolor="#FFFFFF" width="597">
-            <tr>
-            <td>
-                <div align="center"><A HREF="http://www.google.be/">
-                <INPUT TYPE=text name=q size=31 maxlength=255 value="">
-                <INPUT TYPE=hidden name=hl value=fr>
-                <INPUT type=submit name=btnG VALUE="Recherche Google">
-            </div>
-            </td></tr></TABLE>
-        -->
     </body>
 </html>
